@@ -19,6 +19,7 @@ public class Homework2_2 {
 	public static int sort(int[] nums,int lo,int hi) {
 		int res=0;
 		if(hi>lo) {
+			
 			// the mid index
 			int mid=lo+(hi-lo)/2;
 			// sort the left part

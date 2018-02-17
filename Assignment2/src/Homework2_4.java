@@ -2,7 +2,9 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import java.lang.reflect.AnnotatedArrayType;
 import java.security.AlgorithmConstraints;
+import java.sql.Array;
 
 public class Homework2_4 {
 	private static int[] auxBU;
@@ -14,12 +16,14 @@ public class Homework2_4 {
 		res=sortUB(nums,0,nums.length-1);
 		return res;
 		}
+	
+	
 	// from bottom to top
 	public static int sortBU(int[] nums) {
 		int res=0;
 		auxBU=new int[nums.length];
-		for(int size=1;size<nums.length;size+=size)
-			for(int left=0;left<nums.length-left;left+=2*size)
+		for(int size=1;size<nums.length;size*=2)
+			for(int left=0;left<nums.length-size;left+=size+size)
 				res+=mergeBU(nums, left, left+size-1, Math.min(left+2*size-1, nums.length-1));
 		return res;
 	}
@@ -31,18 +35,15 @@ public class Homework2_4 {
 		if(right>left) {
 			int mid=left+(right-left)/2;
 			// sort the left part
-			sortUB(nums,left,mid);
+			res+=sortUB(nums,left,mid);
 			// sort the right part
-			sortUB(nums,mid+1,right);
+			res+=sortUB(nums,mid+1,right);	
 			// merge the 2 subarray
 			res+=mergeUB(nums, left, mid, right);
 		}
-
-		
 		return res;
-		
-		
 	}
+	
 	// merge BU
 	public static int mergeBU(int[] nums,int left,int mid,int right) {
 		int res=0;
@@ -102,43 +103,44 @@ public class Homework2_4 {
 		try {
 			int[] result=new int[12];
 			int[] comNum=new int[12];
+			int[] array=null;
 			String[] fileName= {"data0.1024","data0.2048","data0.4096","data0.8192","data0.16384","data0.32768",
 					"data1.1024","data1.2048","data1.4096","data1.8192","data1.16384","data1.32768"};
-			for(int i=0;i<5;i++) {
-				for(int k=0;k<fileName.length;k++) {
-					// read the data from the file
-					File file=new File(fileName[k]);
-					FileReader fileReader = new FileReader(file);
-					
-					int size=Integer.valueOf(fileName[k].substring(6,fileName[k].length()));
-					int[] array=new int[size];
-					BufferedReader bufferedReader = new BufferedReader(fileReader);
-					String line;
-					int index=0;
-					// to store the data in the file into a array
-					while ((line = bufferedReader.readLine()) != null) {
-						array[index]=Integer.valueOf(line);
-						index++;
-					}
-					
-					fileReader.close();
 
-					long startTime=System.nanoTime();
-					//int num=sortUB(array);
-					int num=sortBU(array);
-					long endTime=System.nanoTime();
-					
-					result[k]+=(endTime-startTime);
-					comNum[k]+=num;
+			for(int k=0;k<fileName.length;k++) {
+				// read the data from the file
+				File file=new File(fileName[k]);
+				FileReader fileReader = new FileReader(file);
+				
+				int size=Integer.valueOf(fileName[k].substring(6,fileName[k].length()));
+				array=new int[size];
+				BufferedReader bufferedReader = new BufferedReader(fileReader);
+				String line;
+				int index=0;
+				// to store the data in the file into a array
+				while ((line = bufferedReader.readLine()) != null) {
+					array[index]=Integer.valueOf(line);
+					index++;
+				}
+				
+				fileReader.close();
 
+				
+				//int num=sortUB(array);
+				int num=sortBU(array);
+				
+				
+				comNum[k]+=num;
+				
+				
+					
 				}
 
-			}
 			for(int i=0;i<12;i++) {
-				System.out.println(String.valueOf(comNum[i]/5) +" compares in the dataset: ");
-				System.out.println("Running time is: "+String.valueOf(result[i]/1000)+" μs");
+				System.out.println(String.valueOf(comNum[i]) +" compares in the dataset: ");
 				System.out.println();
 			}
+			
 
 		}catch(IOException e) {
 			e.printStackTrace();
