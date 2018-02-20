@@ -10,7 +10,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class Homework2_5 {
 
 	// the value for CUTTOFF to insertion sort
-	public static final int CUTOFF_VALUE=3;
+	public static final int CUTOFF_VALUE=0;
 	
 	public static int quickSort(int[] nums) {
 		int comNum=0;
@@ -24,7 +24,7 @@ public class Homework2_5 {
 	public static int quickSort(int[] nums,int lo, int hi) {
 		// add a CUTOFF constrain
 		int comNum=0;
-		if(lo+CUTOFF_VALUE>hi) {
+		if(lo+CUTOFF_VALUE>=hi) {
 			comNum=insertionSort(nums,lo,hi);
 			return comNum;
 		} else {
@@ -115,7 +115,7 @@ public class Homework2_5 {
 			int[] array=null;
 			String[] fileName= {"data0.1024","data0.2048","data0.4096","data0.8192","data0.16384","data0.32768",
 					"data1.1024","data1.2048","data1.4096","data1.8192","data1.16384","data1.32768"};
-			
+			for(int i=0;i<5;i++) {
 				for(int k=0;k<fileName.length;k++) {
 					// read the data from the file
 					File file=new File(fileName[k]);
@@ -134,18 +134,18 @@ public class Homework2_5 {
 					
 					fileReader.close();
 					
-					long startTime=System.currentTimeMillis();
+					long startTime=System.nanoTime();
 					int num=quickSort(array);
-					long endTime=System.currentTimeMillis();
+					long endTime=System.nanoTime();
 					
 					result[k]+=(endTime-startTime);
 					comNum[k]+=num;
 				}
-			
+			}
 
 			for(int i=0;i<12;i++) {
-				System.out.println(String.valueOf(comNum[i]) +" compares in the dataset: ");
-				//System.out.println("Running time is: "+String.valueOf(result[i]/5)+" ms");
+				System.out.println(String.valueOf(comNum[i]/5) +" compares in the dataset: ");
+				System.out.println("Running time is: "+String.valueOf(result[i]/5000)+"μs");
 				System.out.println();
 			}
 			

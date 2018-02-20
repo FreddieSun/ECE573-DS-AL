@@ -107,38 +107,40 @@ public class Homework2_4 {
 			String[] fileName= {"data0.1024","data0.2048","data0.4096","data0.8192","data0.16384","data0.32768",
 					"data1.1024","data1.2048","data1.4096","data1.8192","data1.16384","data1.32768"};
 			
+			for(int i=0;i<5;i++) {
 
-			for(int k=0;k<fileName.length;k++) {
-				// read the data from the file
-				File file=new File(fileName[k]);
-				FileReader fileReader = new FileReader(file);
-				
-				int size=Integer.valueOf(fileName[k].substring(6,fileName[k].length()));
-				array=new int[size];
-				BufferedReader bufferedReader = new BufferedReader(fileReader);
-				String line;
-				int index=0;
-				// to store the data in the file into a array
-				while ((line = bufferedReader.readLine()) != null) {
-					array[index]=Integer.valueOf(line);
-					index++;
+				for(int k=0;k<fileName.length;k++) {
+					// read the data from the file
+					File file=new File(fileName[k]);
+					FileReader fileReader = new FileReader(file);
+					
+					int size=Integer.valueOf(fileName[k].substring(6,fileName[k].length()));
+					array=new int[size];
+					BufferedReader bufferedReader = new BufferedReader(fileReader);
+					String line;
+					int index=0;
+					// to store the data in the file into a array
+					while ((line = bufferedReader.readLine()) != null) {
+						array[index]=Integer.valueOf(line);
+						index++;
+					}
+					
+					fileReader.close();
+	
+					long startTime=System.nanoTime();
+					//int num=sortUB(array);
+					int num=sortBU(array);
+					long endTime=System.nanoTime();
+					
+					result[k]+=(endTime-startTime);
+					comNum[k]+=num;
 				}
-				
-				fileReader.close();
-
-				long startTime=System.nanoTime();
-				//int num=sortUB(array);
-				int num=sortBU(array);
-				long endTime=System.nanoTime();
-				
-				result[k]+=(endTime-startTime);
-				comNum[k]+=num;
 			}
 			
 
 			for(int i=0;i<12;i++) {
 				System.out.println(String.valueOf(comNum[i]) +" compares in the dataset: ");
-				//System.out.println("Running time is: "+String.valueOf(result[i]/5000)+" μs");
+				System.out.println("Running time is: "+String.valueOf(result[i]/5000)+" μs");
 
 				System.out.println();
 			}

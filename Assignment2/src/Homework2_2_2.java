@@ -3,8 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class Homework2_2 {
-	
+public class Homework2_2_2 {
 	private static int[] aux;
 	public static int countKTD(int[] nums) {
 		int res=0;
@@ -13,7 +12,7 @@ public class Homework2_2 {
 		return res;
 	}
 	
-	// This method sort the ax array and returns the number of inversions
+	// This method sort the aux array and returns the number of inversions
 	public static int sort(int[] nums,int lo,int hi) {
 		int res=0;
 		if(hi>lo) {
@@ -63,26 +62,46 @@ public class Homework2_2 {
 			String[] fileName= {"data0.1024","data0.2048","data0.4096","data0.8192","data0.16384","data0.32768",
 					"data1.1024","data1.2048","data1.4096","data1.8192","data1.16384","data1.32768"};
 			for(int i=0;i<5;i++) {
-				for(int k=0;k<fileName.length;k++) {
+				for(int k=0;k<6;k++) {
 					// read the data from the file
 					File file=new File(fileName[k]);
 					FileReader fileReader = new FileReader(file);
 					
 					int size=Integer.valueOf(fileName[k].substring(6,fileName[k].length()));
 					int[] array=new int[size];
+					
 					BufferedReader bufferedReader = new BufferedReader(fileReader);
 					String line;
 					int index=0;
 					// to store the data in the file into a array
 					while ((line = bufferedReader.readLine()) != null) {
-						array[index]=Integer.valueOf(line);
+						array[index]=Integer.valueOf(line)-1;
 						index++;
 					}
 					
 					fileReader.close();
+					
+					// read the data from the file
+					File file1=new File(fileName[k+6]);
+					FileReader fileReader1 = new FileReader(file1);
+					
+					int size1=Integer.valueOf(fileName[k+6].substring(6,fileName[k+6].length()));
+					int[] array1=new int[size1];
+					
+					BufferedReader bufferedReader1 = new BufferedReader(fileReader1);
+					String line1;
+					int index1=0;
+					// to store the data in the file into a array
+					while ((line1 = bufferedReader1.readLine()) != null) {
+						array1[index1]=Integer.valueOf(line1)-1;
+						index1++;
+					}
+					
+					fileReader1.close();
 
 					long startTime=System.nanoTime();
-					int num=countKTD(array);
+					// todo
+					int num=distance(array, array1);
 					long endTime=System.nanoTime();
 					
 					result[k]+=(endTime-startTime);
@@ -94,7 +113,7 @@ public class Homework2_2 {
 				}
 
 			}
-			for(int i=0;i<12;i++) {
+			for(int i=0;i<6;i++) {
 				System.out.println(String.valueOf(invNum[i]/5) +" inversions in the dataset: ");
 				System.out.println("Running time is: "+String.valueOf(result[i]/5000)+" μs");
 				System.out.println();
@@ -105,5 +124,22 @@ public class Homework2_2 {
 		}
 
 	}
+	
+	// return Kendall tau distance between two permutations
+    public static int distance(int[] a, int[] b) {
+        if (a.length != b.length) {
+            throw new IllegalArgumentException("Array dimensions disagree");
+        }
+        int n = a.length;
 
+        int[] ainv = new int[n];
+        for (int i = 0; i < n; i++)
+            ainv[a[i]] = i;
+
+        int[] bnew = new int[n];
+        for (int i = 0; i < n; i++)
+            bnew[i] = ainv[b[i]];
+
+        return countKTD(bnew);
+    }
 }
