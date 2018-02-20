@@ -98,15 +98,13 @@ public class Homework2_2 {
 			}
 			for(int i=0;i<12;i++) {
 				System.out.println(String.valueOf(invNum[i]/5) +" inversions in the dataset: ");
-				System.out.println("Running time is: "+String.valueOf(result[i]/1000)+" μs");
+				System.out.println("Running time is: "+String.valueOf(result[i]/5000)+" μs");
 				System.out.println();
 			}
 
 		}catch(IOException e) {
 			e.printStackTrace();
 		}
-//		 int arr[] = new int[]{1, 5, 4, 8, 10,2,6,9,3,7};
-//	     System.out.println("Number of inversions are " + countKTD(arr));
 
 	}
 

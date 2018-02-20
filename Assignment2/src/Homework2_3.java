@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.function.IntPredicate;
 
 public class Homework2_3 {
 
@@ -18,6 +19,7 @@ public class Homework2_3 {
 		}
 		
 		countingSort(nums);
+		//easyCountingSort(nums);
 		
 		for(int i=0;i<nums.length;i++)
 			System.out.println(nums[i]);
@@ -54,5 +56,36 @@ public class Homework2_3 {
 		
 		for(int i=0;i<size;i++)
 			nums[i]=res[i];
+	}
+	
+	public static void easyCountingSort(int[] nums) {
+		int[] count=new int[4];
+		for(int i=0;i<nums.length;i++) {
+			switch(nums[i]) {
+			default:
+				System.out.println("Error");
+				break;
+			case 1:
+				count[0]++;
+				break;
+			case 11:
+				count[1]++;
+				break;
+			case 111:
+				count[2]++;
+				break;
+			case 1111:
+				count[3]++;
+				break;
+			}
+		}
+		for(int i=0;i<count[0];i++)
+			nums[i]=1;
+		for(int i=count[0];i<count[0]+count[1];i++)
+			nums[i]=11;
+		for(int i=count[0]+count[1];i<count[0]+count[1]+count[2];i++)
+			nums[i]=111;
+		for(int i=count[0]+count[1]+count[2];i<nums.length;i++)
+			nums[i]=1111;
 	}
 }
