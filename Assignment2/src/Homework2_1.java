@@ -53,7 +53,7 @@ public class Homework2_1 {
 				FileReader fileReader = new FileReader(file);
 				
 				int size=Integer.valueOf(fileName[k].substring(6,fileName[k].length()));
-				int[] array=new int[size];X
+				int[] array=new int[size];
 				BufferedReader bufferedReader = new BufferedReader(fileReader);
 				String line;
 				int index=0;
