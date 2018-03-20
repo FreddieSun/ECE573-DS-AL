@@ -17,13 +17,13 @@ public class Q2 {
         }
         shuffleArray(randInput);
 
-        BST<Integer,Integer> randBST = new BST<>();
-        BST<Integer,Integer> sortedBST = new BST<>();
+        MyBST mRandBST = new MyBST();
+        MyBST mSortedBST = new MyBST();
 
         // insert the node into the corresponding BST
         for (int i = 0; i < 256; i++) {
-            randBST.put(randInput[i],1);
-            sortedBST.put(sortedInput[i], 1);
+            mRandBST.insert(randInput[i]);
+            mSortedBST.insert(sortedInput[i]);
         }
 
 
@@ -35,9 +35,9 @@ public class Q2 {
         3. calculate the average path length
 
          */
-        
-        System.out.println("The avg path length of BST with N-random insertions is: " + randBST.avgPathLength());
-        System.out.println("The avg path length of BST with N-sorted insertions is: " + sortedBST.avgPathLength());
+
+        System.out.println("The avg path length of BST with N-random insertions is: " + mRandBST.avgPathLength());
+        System.out.println("The avg path length of BST with N-sorted insertions is: " + mSortedBST.avgPathLength());
 
 
 

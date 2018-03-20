@@ -90,7 +90,7 @@ public class BST<Key extends Comparable<Key>, Value> {
         List<Integer> list = new ArrayList<>();
         double avg = 0;
         if (x != null) searchBST(root, 1, list);
-        //todo calculate the avg
+        // calculate the avg
         Integer sum = 0;
         if (!list.isEmpty()) {
             for (Integer val : list) {
@@ -103,7 +103,7 @@ public class BST<Key extends Comparable<Key>, Value> {
 
     private void searchBST (Node x, int length, List<Integer> list) {
         if (x.left == null && x.right == null) {
-            list.add(length + 1);
+            list.add(length);
         }
         if (x.left != null) {
             searchBST(x.left, length + 1, list);
