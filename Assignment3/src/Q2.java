@@ -7,27 +7,34 @@ public class Q2 {
     private static Random rand;
 
     public static void main(String[] args) {
-        // generate an array (size 256) which contains random number from 1 - 256
-        // generate an ordered array from 1 - 256
-        int[] sortedInput = new int[256];
-        int[] randInput = new int[256];
-        for (int i = 0; i < 256; i++) {
-            sortedInput[i] = i + 1;
-            randInput[i] = i + 1;
-        }
-        shuffleArray(randInput);
 
-        MyBST mRandBST = new MyBST();
-        MyBST mSortedBST = new MyBST();
+        int[] nList = {64,128,256,512,1024,2048,4096,8192};
+        for (int k = 0; k < nList.length; k++) {
+            // generate an array (size 256) which contains random number from 1 - 256
+            // generate an ordered array from 1 - 256
+            int N = nList[k];
+            int[] sortedInput = new int[N];
+            int[] randInput = new int[N];
+            for (int i = 0; i < N; i++) {
+                sortedInput[i] = i + 1;
+                randInput[i] = i + 1;
+            }
 
-        // insert the node into the corresponding BST
-        for (int i = 0; i < 256; i++) {
-            mRandBST.insert(randInput[i]);
-            mSortedBST.insert(sortedInput[i]);
-        }
+            shuffleArray(randInput);
+
+            MyBST mRandBST = new MyBST();
+            MyBST mSortedBST = new MyBST();
+
+            // insert the node into the corresponding BST
+            for (int i = 0; i < N; i++) {
+                mRandBST.insert(randInput[i]);
+                mSortedBST.insert(sortedInput[i]);
+            }
 
 
         /*
+
+
 
         calculate the average path length
         1. find all the leave node
@@ -36,8 +43,11 @@ public class Q2 {
 
          */
 
-        System.out.println("The avg path length of BST with N-random insertions is: " + mRandBST.avgPathLength());
-        System.out.println("The avg path length of BST with N-sorted insertions is: " + mSortedBST.avgPathLength());
+            System.out.println("The avg path length of BST with " + N + "-random insertions is: " + mRandBST.avgPathLength());
+            System.out.println("The avg path length of BST with " + N + "-sorted insertions is: " + mSortedBST.avgPathLength());
+        }
+
+
 
 
 

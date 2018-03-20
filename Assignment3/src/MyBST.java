@@ -43,6 +43,34 @@ public class MyBST {
 
     }
 
+    // return the number of node in the BST which its smaller than the input
+    public int rank(int val) {
+        return rank(root, val);
+    }
+
+    private int rank(Node x, int val) {
+        if (x == null) return 0;
+        if (val < x.val) return rank (x.left, val);
+        else if (val > x.val) return size(x.left) + rank (x.right, val) + 1;
+        else return size(x.left);
+    }
+
+    // return the value which is kth smallest in the BST
+    public int select(int k) {
+        if (k < 0 || k > size())
+            throw new IllegalArgumentException("input is invalid");
+        return select(root, k).val;
+    }
+
+    private Node select(Node x, int k) {
+        if (x == null) return null;
+        int t = size(x.left);
+        if      (t > k) return select(x.left,  k);
+        else if (t < k) return select(x.right, k-t-1);
+        else            return x;
+    }
+
+
     public double avgPathLength() {
         return avgPathLength(root);
     }
