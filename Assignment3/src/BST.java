@@ -26,6 +26,8 @@
 
 import edu.princeton.cs.algs4.*;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
 /**
@@ -77,6 +79,37 @@ public class BST<Key extends Comparable<Key>, Value> {
             this.key = key;
             this.val = val;
             this.size = size;
+        }
+    }
+
+    public double avgPathLength() {
+        return avgPathLength(root);
+    }
+
+    private double avgPathLength(Node x) {
+        List<Integer> list = new ArrayList<>();
+        double avg = 0;
+        if (x != null) searchBST(root, 1, list);
+        //todo calculate the avg
+        Integer sum = 0;
+        if (!list.isEmpty()) {
+            for (Integer val : list) {
+                sum += val;
+            }
+            avg = sum.doubleValue()/list.size();
+        }
+        return avg;
+    }
+
+    private void searchBST (Node x, int length, List<Integer> list) {
+        if (x.left == null && x.right == null) {
+            list.add(length + 1);
+        }
+        if (x.left != null) {
+            searchBST(x.left, length + 1, list);
+        }
+        if (x.right != null) {
+            searchBST(x.right, length + 1, list);
         }
     }
 
@@ -171,6 +204,8 @@ public class BST<Key extends Comparable<Key>, Value> {
         x.size = 1 + size(x.left) + size(x.right);
         return x;
     }
+
+
 
 
     /**
@@ -519,6 +554,7 @@ public class BST<Key extends Comparable<Key>, Value> {
             if (key.compareTo(select(rank(key))) != 0) return false;
         return true;
     }
+
 
 
     /**

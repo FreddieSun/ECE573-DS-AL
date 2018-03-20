@@ -1,7 +1,5 @@
-import edu.princeton.cs.algs4.BST;
 
-import java.util.Arrays;
-import java.util.Collections;
+
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -28,6 +26,7 @@ public class Q2 {
             sortedBST.put(sortedInput[i], 1);
         }
 
+
         /*
 
         calculate the average path length
@@ -36,6 +35,9 @@ public class Q2 {
         3. calculate the average path length
 
          */
+        
+        System.out.println("The avg path length of BST with N-random insertions is: " + randBST.avgPathLength());
+        System.out.println("The avg path length of BST with N-sorted insertions is: " + sortedBST.avgPathLength());
 
 
 
