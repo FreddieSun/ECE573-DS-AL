@@ -1,18 +1,23 @@
 import java.util.Random;
+import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
-public class Q3 {
+public class Q4 {
     public static void main(String[] args) {
-        int[] nList = {10000, 100000, 1000000};
-        double[] res = new double[3];
-        for (int j = 0; j < 50; j++) {
+        int[] nList = new int[10000];
+        for (int i = 0; i < 10000; i++)
+            nList[i] = i + 1;
+
+
+
+        for (int j = 0; j < 1000; j++) {
             for (int k = 0; k < nList.length; k++) {
-                // generate an array (size 256) which contains random number from 1 - 256
-                // generate an ordered array from 1 - 256
+
                 int N = nList[k];
                 int[] input = new int[N];
+                Scanner sc = new Scanner(System.in);
                 for (int i = 0; i < N; i++) {
-                    input[i] = i + 1;
+                    input[i] = sc.nextInt();
                 }
 
                 shuffleArray(input);
@@ -25,12 +30,8 @@ public class Q3 {
 
                 }
 
-                res[k] += rbBST.countRedPercentage() * 100;
             }
-        }
-        for (int i = 0; i < 3; i++) {
-            System.out.println("The percentage of red nodes after " + nList[i] + "-increasing insertions is: " + res[i] / 50 +"%");
-        }
+         }
     }
 
 

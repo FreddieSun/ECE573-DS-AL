@@ -78,7 +78,7 @@ public class MyBST {
     private double avgPathLength(Node x) {
         List<Integer> list = new ArrayList<>();
         double avg = 0;
-        if (x != null) searchBST(root, 1, list);
+        if (x != null) searchBST(root, 0, list);
         // calculate the avg
         Integer sum = 0;
         if (!list.isEmpty()) {

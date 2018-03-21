@@ -54,6 +54,48 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         countRedHelper(x.right,list);
     }
 
+
+    public int countInternalPathLength() {
+        return countInternalPathLength(root);
+    }
+
+    private int countInternalPathLength(Node x) {
+        List<Integer> list = new ArrayList<>();
+        countInternalPathLengthHelper(x,list);
+        int sum = 0;
+        for (Integer i: list) {
+            sum += i;
+        }
+        return sum;
+    }
+
+    private void countInternalPathLengthHelper(Node x, List<Integer> list) {
+        if (x == null)
+            return;
+        list.add(countPathLength(x));
+        countInternalPathLengthHelper(x.left,list);
+        countInternalPathLengthHelper(x.right,list);
+    }
+
+    private int countPathLength(Node target) {
+        List<Integer> list = new ArrayList<>();
+        countPathLengthHelper(root, target ,0 , list);
+        return list.get(0);
+    }
+
+    private void countPathLengthHelper(Node x, Node target, int length, List<Integer> list) {
+        if (x == null)
+            return;
+        if (x.key == target.key) {
+            list.add (length);
+        }
+        if (x.left != null) {
+            countPathLengthHelper(x.left, target, length + 1, list);
+        }
+        if (x.right != null) {
+            countPathLengthHelper(x.right, target, length + 1, list);
+        }
+    }
     /***************************************************************************
      *  Node helper methods.
      ***************************************************************************/
