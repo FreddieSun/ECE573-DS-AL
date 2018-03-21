@@ -17,7 +17,7 @@ public class Q3 {
                     input[i] = i + 1;
                 }
 
-                //shuffleArray(input);
+                shuffleArray(input);
 
                 RedBlackBST<Integer, Integer> rbBST = new RedBlackBST<>();
 
