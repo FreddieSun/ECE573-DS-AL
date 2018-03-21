@@ -8,16 +8,15 @@ public class Q4 {
         for (int i = 0; i < 10000; i++)
             nList[i] = i + 1;
 
-
+        double[][] res = new double[10000][2];
 
         for (int j = 0; j < 1000; j++) {
             for (int k = 0; k < nList.length; k++) {
 
                 int N = nList[k];
                 int[] input = new int[N];
-                Scanner sc = new Scanner(System.in);
                 for (int i = 0; i < N; i++) {
-                    input[i] = sc.nextInt();
+                    input[i] = i + 1;
                 }
 
                 shuffleArray(input);
@@ -27,10 +26,18 @@ public class Q4 {
                 // insert the node into the corresponding BST
                 for (int i = 0; i < N; i++) {
                     rbBST.put(input[i], 1);
-
                 }
 
+                double[] tempRes = rbBST.countInternalPathLength();
+                res[k][0] += tempRes[0];
+                res[k][1] += tempRes[1];
             }
+         }
+
+         for (int i = 0; i < 10000; i++) {
+            System.out.println("Avg internal path length of " + nList[i] + "random keys is: " + res[i][0]/10000);
+            System.out.println("std deviation of avg path length of " + nList[i] + "random keys is: " + res[i][1]/10000 );
+
          }
     }
 

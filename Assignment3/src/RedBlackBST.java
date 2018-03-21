@@ -55,18 +55,25 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     }
 
 
-    public int countInternalPathLength() {
+    public double[] countInternalPathLength() {
         return countInternalPathLength(root);
     }
 
-    private int countInternalPathLength(Node x) {
+    private double[] countInternalPathLength(Node x) {
         List<Integer> list = new ArrayList<>();
+        double[] res = new double[2];
         countInternalPathLengthHelper(x,list);
         int sum = 0;
         for (Integer i: list) {
             sum += i;
         }
-        return sum;
+        res[0] = (double) sum/list.size();
+        double dev = 0;
+        for (Integer i:list) {
+            dev += Math.pow(i - res[0],2);
+        }
+        res[1] = Math.sqrt(dev / list.size());
+        return res;
     }
 
     private void countInternalPathLengthHelper(Node x, List<Integer> list) {
