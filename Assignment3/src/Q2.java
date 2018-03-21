@@ -4,7 +4,6 @@ import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Q2 {
-    private static Random rand;
 
     public static void main(String[] args) {
 

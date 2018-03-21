@@ -1,73 +1,9 @@
-/******************************************************************************
- *  Compilation:  javac RedBlackBST.java
- *  Execution:    java RedBlackBST < input.txt
- *  Dependencies: StdIn.java StdOut.java  
- *  Data files:   https://algs4.cs.princeton.edu/33balanced/tinyST.txt  
- *
- *  A symbol table implemented using a left-leaning red-black BST.
- *  This is the 2-3 version.
- *
- *  Note: commented out assertions because DrJava now enables assertions
- *        by default.
- *
- *  % more tinyST.txt
- *  S E A R C H E X A M P L E
- *
- *  % java RedBlackBST < tinyST.txt
- *  A 8
- *  C 4
- *  E 12
- *  H 5
- *  L 11
- *  M 9
- *  P 10
- *  R 3
- *  S 0
- *  X 7
- *
- ******************************************************************************/
+import edu.princeton.cs.algs4.*;
 
-import edu.princeton.cs.algs4.Queue;
-import edu.princeton.cs.algs4.StdIn;
-import edu.princeton.cs.algs4.StdOut;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.NoSuchElementException;
 
-/**
- *  The {@code BST} class represents an ordered symbol table of generic
- *  key-value pairs.
- *  It supports the usual <em>put</em>, <em>get</em>, <em>contains</em>,
- *  <em>delete</em>, <em>size</em>, and <em>is-empty</em> methods.
- *  It also provides ordered methods for finding the <em>minimum</em>,
- *  <em>maximum</em>, <em>floor</em>, and <em>ceiling</em>.
- *  It also provides a <em>keys</em> method for iterating over all of the keys.
- *  A symbol table implements the <em>associative array</em> abstraction:
- *  when associating a value with a key that is already in the symbol table,
- *  the convention is to replace the old value with the new value.
- *  Unlike {@link java.util.Map}, this class uses the convention that
- *  values cannot be {@code null}—setting the
- *  value associated with a key to {@code null} is equivalent to deleting the key
- *  from the symbol table.
- *  <p>
- *  This implementation uses a left-leaning red-black BST. It requires that
- *  the key type implements the {@code Comparable} interface and calls the
- *  {@code compareTo()} and method to compare two keys. It does not call either
- *  {@code equals()} or {@code hashCode()}.
- *  The <em>put</em>, <em>contains</em>, <em>remove</em>, <em>minimum</em>,
- *  <em>maximum</em>, <em>ceiling</em>, and <em>floor</em> operations each take
- *  logarithmic time in the worst case, if the tree becomes unbalanced.
- *  The <em>size</em>, and <em>is-empty</em> operations take constant time.
- *  Construction takes constant time.
- *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/33balanced">Section 3.3</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *  For other implementations of the same API, see {@link ST}, {@link BinarySearchST},
- *  {@link SequentialSearchST}, {@link BST},
- *  {@link SeparateChainingHashST}, {@link LinearProbingHashST}, and {@link AVLTreeST}.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- */
 
 public class RedBlackBST<Key extends Comparable<Key>, Value> {
 
@@ -96,6 +32,26 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
      * Initializes an empty symbol table.
      */
     public RedBlackBST() {
+
+    }
+
+    public double countRedPercentage() {
+        return countRed(root);
+    }
+
+    private double countRed(Node x) {
+        List<Integer> list = new ArrayList<>();
+        countRedHelper(x, list);
+        return (double) list.size()/size();
+    }
+
+    private void countRedHelper(Node x, List<Integer> list) {
+        if (x == null)
+            return;
+        if (x.color == RED)
+            list.add(1);
+        countRedHelper(x.left,list);
+        countRedHelper(x.right,list);
     }
 
     /***************************************************************************
@@ -701,6 +657,8 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
         if (!isRed(x)) black--;
         return isBalanced(x.left, black) && isBalanced(x.right, black);
     }
+
+
 
 
     /**
