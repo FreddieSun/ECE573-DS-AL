@@ -55,54 +55,24 @@ public class RedBlackBST<Key extends Comparable<Key>, Value> {
     }
 
 
-    public double[] countInternalPathLength() {
+    public double countInternalPathLength() {
         return countInternalPathLength(root);
     }
 
-    private double[] countInternalPathLength(Node x) {
-        List<Integer> list = new ArrayList<>();
-        double[] res = new double[2];
-        countInternalPathLengthHelper(x,list);
-        int sum = 0;
-        for (Integer i: list) {
-            sum += i;
-        }
-        res[0] = (double) sum/list.size();
-        double dev = 0;
-        for (Integer i:list) {
-            dev += Math.pow(i - res[0],2);
-        }
-        res[1] = Math.sqrt(dev / list.size());
-        return res;
+    private double countInternalPathLength(Node x) {
+        return (double) countInternalPathLengthHelper(x)/size();
     }
 
-    private void countInternalPathLengthHelper(Node x, List<Integer> list) {
+    private int countInternalPathLengthHelper(Node x) {
         if (x == null)
-            return;
-        list.add(countPathLength(x));
-        countInternalPathLengthHelper(x.left,list);
-        countInternalPathLengthHelper(x.right,list);
+            return 0;
+        int pathLength = 0;
+        pathLength = x.size + countInternalPathLengthHelper(x.left) + countInternalPathLengthHelper(x.right);
+
+        return pathLength;
     }
 
-    private int countPathLength(Node target) {
-        List<Integer> list = new ArrayList<>();
-        countPathLengthHelper(root, target ,1 , list);
-        return list.get(0);
-    }
 
-    private void countPathLengthHelper(Node x, Node target, int length, List<Integer> list) {
-        if (x == null)
-            return;
-        if (x.key == target.key) {
-            list.add (length);
-        }
-        if (x.left != null) {
-            countPathLengthHelper(x.left, target, length + 1, list);
-        }
-        if (x.right != null) {
-            countPathLengthHelper(x.right, target, length + 1, list);
-        }
-    }
     /***************************************************************************
      *  Node helper methods.
      ***************************************************************************/

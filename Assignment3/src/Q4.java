@@ -3,16 +3,23 @@ import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Q4 {
+
+    final static int NUM_OF_TRIAL = 1000;
+    final static int RANGE_OF_N = 10000;
+
     public static void main(String[] args) {
-        int[] nList = new int[100];
-        for (int i = 0; i < 100; i++)
+        int[] nList = new int[RANGE_OF_N];
+        for (int i = 0; i < RANGE_OF_N; i++)
             nList[i] = i + 1;
 
-        double[][] res = new double[100][2];
+        double[] avg = new double[RANGE_OF_N];
+        double[] dev = new double[RANGE_OF_N];
 
-        for (int j = 0; j < 1; j++) {
-            for (int k = 0; k < nList.length; k++) {
+        for (int k = 0; k < nList.length; k++) {
+            double[] tempAvg = new double[NUM_OF_TRIAL];
 
+            // for every N, test 1000 times. save to the array.
+            for (int j = 0; j < NUM_OF_TRIAL; j++) {
                 int N = nList[k];
                 int[] input = new int[N];
                 for (int i = 0; i < N; i++) {
@@ -28,18 +35,31 @@ public class Q4 {
                     rbBST.put(input[i], 1);
                 }
 
-                double[] tempRes = rbBST.countInternalPathLength();
-                res[k][0] += tempRes[0];
-                res[k][1] += tempRes[1];
+                double tempRes = rbBST.countInternalPathLength();
+                tempAvg[j] = tempRes;
             }
-         }
 
-         for (int i = 0; i < 100; i++) {
-            System.out.println("Avg internal path length of " + nList[i] + " random keys is: " + res[i][0]);
-            System.out.println("std deviation of avg path length of " + nList[i] + " random keys is: " + res[i][1] );
+            // 求 N个插入时，平均的AVG
+            double sum = 0.0;
+            for (int j = 0; j < NUM_OF_TRIAL; j++) {
+                sum += tempAvg[j];
+            }
+            avg[k] = sum / NUM_OF_TRIAL;
+
+            // 求 N个插入时，std dev
+            double devSum = 0.0;
+            for (int j = 0; j < NUM_OF_TRIAL; j++) {
+                double diff = tempAvg[j] - avg[k];
+                devSum += Math.pow(diff, 2);
+            }
+            dev[k] = Math.sqrt(devSum / NUM_OF_TRIAL);
+
+            System.out.println("Avg internal path length of " + nList[k] + " random keys is: " + avg[k]);
+            System.out.println("std deviation of avg path length of " + nList[k] + " random keys is: " + dev[k] );
             System.out.println();
+        }
 
-         }
+
     }
 
 
