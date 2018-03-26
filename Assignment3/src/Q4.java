@@ -4,13 +4,13 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Q4 {
     public static void main(String[] args) {
-        int[] nList = new int[10000];
-        for (int i = 0; i < 10000; i++)
+        int[] nList = new int[100];
+        for (int i = 0; i < 100; i++)
             nList[i] = i + 1;
 
-        double[][] res = new double[10000][2];
+        double[][] res = new double[100][2];
 
-        for (int j = 0; j < 1000; j++) {
+        for (int j = 0; j < 1; j++) {
             for (int k = 0; k < nList.length; k++) {
 
                 int N = nList[k];
@@ -34,9 +34,10 @@ public class Q4 {
             }
          }
 
-         for (int i = 0; i < 10000; i++) {
-            System.out.println("Avg internal path length of " + nList[i] + "random keys is: " + res[i][0]/10000);
-            System.out.println("std deviation of avg path length of " + nList[i] + "random keys is: " + res[i][1]/10000 );
+         for (int i = 0; i < 100; i++) {
+            System.out.println("Avg internal path length of " + nList[i] + " random keys is: " + res[i][0]);
+            System.out.println("std deviation of avg path length of " + nList[i] + " random keys is: " + res[i][1] );
+            System.out.println();
 
          }
     }

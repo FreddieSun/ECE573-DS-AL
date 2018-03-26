@@ -5,7 +5,7 @@ public class Q3 {
     public static void main(String[] args) {
         int[] nList = {10000, 100000, 1000000};
         double[] res = new double[3];
-        for (int j = 0; j < 50; j++) {
+        for (int j = 0; j < 100; j++) {
             for (int k = 0; k < nList.length; k++) {
                 // generate an array (size 256) which contains random number from 1 - 256
                 // generate an ordered array from 1 - 256
@@ -29,7 +29,7 @@ public class Q3 {
             }
         }
         for (int i = 0; i < 3; i++) {
-            System.out.println("The percentage of red nodes after " + nList[i] + "-increasing insertions is: " + res[i] / 50 +"%");
+            System.out.println("The percentage of red nodes after " + nList[i] + "-increasing insertions is: " + res[i] / 100  +"%");
         }
     }
 
