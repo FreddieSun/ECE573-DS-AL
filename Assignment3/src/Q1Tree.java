@@ -1,4 +1,5 @@
 import edu.princeton.cs.algs4.*;
+import javafx.collections.transformation.FilteredList;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,7 +35,6 @@ public class Q1Tree<Key extends Comparable<Key>, Value> {
     public Q1Tree() {
 
     }
-
 
     /***************************************************************************
      *  Node helper methods.
@@ -135,16 +135,24 @@ public class Q1Tree<Key extends Comparable<Key>, Value> {
 
     // insert the key-value pair in the subtree rooted at h
     private Node put(Node h, Key key, Value val) {
+        if (h == null)
+            return new Node(key, val ,BLACK, 1);
         int cmp = key.compareTo(h.key);
         if (cmp < 0) {
-            if (h.left != null) h.left = put(h.left, key, val);
-            else if (h.color == RED) return new Node(key, val, BLACK, 1);
-            else if (h.color == BLACK) return new Node(key, val, RED, 1);
+            h.left = put(h.left, key, val);
+            if (h.color == RED)
+                h.left.color = BLACK;
+            else
+                h.left.color = RED;
         } else if (cmp > 0) {
-            if (h.right != null) h.right = put(h.right, key, val);
-            else if (h.color == RED) return new Node(key, val, BLACK, 1);
-            else if (h.color == BLACK) return new Node(key, val, RED, 1);
-        } else h.val = val;
+            h.right = put(h.right, key, val);
+            if (h.color == BLACK)
+                h.right.color = RED;
+            else
+                h.right.color = BLACK;
+        } else {
+            h.val = val;
+        }
 
         // fix-up any right-leaning links
         if (isRed(h.left)  &&  isRed(h.right))     flipColors(h);
@@ -500,6 +508,37 @@ public class Q1Tree<Key extends Comparable<Key>, Value> {
         if (lo.compareTo(hi) > 0) return 0;
         if (contains(hi)) return rank(hi) - rank(lo) + 1;
         else              return rank(hi) - rank(lo);
+    }
+
+    public double avgPathLength() {
+        return avgPathLength(root);
+    }
+
+    private double avgPathLength(Node x) {
+        List<Integer> list = new ArrayList<>();
+        double avg = 0;
+        if (x != null) searchQ1Tree(root, 1, list);
+        // calculate the avg
+        Integer sum = 0;
+        if (!list.isEmpty()) {
+            for (Integer val : list) {
+                sum += val;
+            }
+            avg = sum.doubleValue()/list.size();
+        }
+        return avg;
+    }
+
+    private void searchQ1Tree (Node x, int length, List<Integer> list) {
+        if (x.left == null && x.right == null) {
+            list.add(length);
+        }
+        if (x.left != null) {
+            searchQ1Tree(x.left, length + 1, list);
+        }
+        if (x.right != null) {
+            searchQ1Tree(x.right, length + 1, list);
+        }
     }
 
 

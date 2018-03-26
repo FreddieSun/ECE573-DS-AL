@@ -21,13 +21,13 @@ public class Q2 {
 
             shuffleArray(randInput);
 
-            MyBST mRandBST = new MyBST();
-            MyBST mSortedBST = new MyBST();
+            Q1Tree mRandBST = new Q1Tree();
+            Q1Tree mSortedBST = new Q1Tree();
 
             // insert the node into the corresponding BST
             for (int i = 0; i < N; i++) {
-                mRandBST.insert(randInput[i]);
-                mSortedBST.insert(sortedInput[i]);
+                mRandBST.put(randInput[i],1);
+                mSortedBST.put(sortedInput[i],1);
             }
 
 
