@@ -7,7 +7,7 @@ public class Q2 {
 
     public static void main(String[] args) {
 
-        int[] nList = {64,128,256,512,1024,2048,4096,8192};
+        int[] nList = {1,2,4,8,16,32,64,128,256,512,1024,2048,4096,8192};
         for (int k = 0; k < nList.length; k++) {
             // generate an array (size 256) which contains random number from 1 - 256
             // generate an ordered array from 1 - 256
@@ -29,21 +29,14 @@ public class Q2 {
                 mRandBST.put(randInput[i],1);
                 mSortedBST.put(sortedInput[i],1);
             }
-
-
         /*
-
-
-
         calculate the average path length
         1. find all the leave node
         2. calculate their depth
         3. calculate the average path length
-
          */
-
-            System.out.println("The avg path length of BST with " + N + "-random insertions is: " + mRandBST.avgPathLength());
-            System.out.println("The avg path length of BST with " + N + "-sorted insertions is: " + mSortedBST.avgPathLength());
+            System.out.println("The avg path length of BST with " + N + "-random insertions is: " + mRandBST.countPathLength());
+            System.out.println("The avg path length of BST with " + N + "-sorted insertions is: " + mSortedBST.countPathLength());
             System.out.println();
         }
 

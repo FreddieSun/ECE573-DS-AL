@@ -538,7 +538,70 @@ public class Q1Tree<Key extends Comparable<Key>, Value> {
         }
     }
 
+    public double countInternalPathLength() {
+        return countInternalPathLength(root);
+    }
 
+    private double countInternalPathLength(Node x) {
+        return (double) countInternalPathLengthHelper(x)/size();
+    }
+
+    private int countInternalPathLengthHelper(Node x) {
+        if (x == null)
+            return 0;
+        int pathLength = 0;
+        pathLength = x.size + countInternalPathLengthHelper(x.left) + countInternalPathLengthHelper(x.right);
+
+        return pathLength;
+    }
+
+    public double countPathLength() {
+        return countPathLength(root);
+    }
+
+    private double countPathLength(Node x) {
+        List<Integer> list = new ArrayList<>();
+        countPathLengthHelper(x, 1, list);
+        int sum = 0;
+        for (Integer i : list) {
+            sum += i;
+        }
+        return (double) sum / (size() - countRed()) ;
+    }
+
+    private void countPathLengthHelper(Node x, int length, List<Integer> list) {
+        if (isRed(x)) {
+            if (x.left != null)
+                countPathLengthHelper(x.left, length, list);
+            if (x.right != null)
+                countPathLengthHelper(x.right, length, list);
+        } else {
+            list.add(length);
+            if (x.left != null)
+                countPathLengthHelper(x.left, length + 1, list);
+            if (x.right != null)
+                countPathLengthHelper(x.right, length + 1, list);
+        }
+    }
+
+    public double countRed() {
+        return countRed(root);
+    }
+
+    private double countRed(Node x) {
+        List<Integer> list = new ArrayList<>();
+        countRedHelper(x, list);
+        return (double) list.size();
+    }
+
+    private void countRedHelper(Node x, List<Integer> list) {
+        if (x == null)
+            return;
+        if (x.color == RED)
+            list.add(1);
+        countRedHelper(x.left,list);
+        countRedHelper(x.right,list);
+    }
 }
 
 /******************************************************************************
