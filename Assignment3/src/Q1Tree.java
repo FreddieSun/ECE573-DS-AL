@@ -136,26 +136,23 @@ public class Q1Tree<Key extends Comparable<Key>, Value> {
     // insert the key-value pair in the subtree rooted at h
     private Node put(Node h, Key key, Value val) {
         if (h == null)
-            return new Node(key, val ,BLACK, 1);
+            return new Node(key, val ,RED, 1);
         int cmp = key.compareTo(h.key);
         if (cmp < 0) {
             h.left = put(h.left, key, val);
-            if (h.color == RED)
+            if (isRed(h) || isRed(h.right))
                 h.left.color = BLACK;
-            else
-                h.left.color = RED;
         } else if (cmp > 0) {
             h.right = put(h.right, key, val);
-            if (h.color == BLACK)
-                h.right.color = RED;
-            else
+            if (isRed(h) || isRed(h.left))
                 h.right.color = BLACK;
         } else {
             h.val = val;
         }
 
         // fix-up any right-leaning links
-        if (isRed(h.left)  &&  isRed(h.right))     flipColors(h);
+//        if (isRed(h.left)  &&  isRed(h.right))
+//            flipColors(h);
         h.size = size(h.left) + size(h.right) + 1;
 
         return h;

@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fb6ede80-bcbe-4d31-aa4f-ace255eb069f" name="Default" comment="" />
+    <list default="true" id="fb6ede80-bcbe-4d31-aa4f-ace255eb069f" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Assignment3/Q1Tree.class" afterPath="$PROJECT_DIR$/out/production/Assignment3/Q1Tree.class" />
+      <change beforePath="$PROJECT_DIR$/src/Q1Tree.java" afterPath="$PROJECT_DIR$/src/Q1Tree.java" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -15,18 +19,18 @@
       <file leaf-file-name="Q1.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Q1.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+            <state relative-caret-position="105">
+              <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Q1Tree.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Q1Tree.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Q1Tree.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2040">
-              <caret line="147" column="16" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
+            <state relative-caret-position="257">
+              <caret line="142" column="37" lean-forward="false" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1685#1686#0" expanded="true" />
@@ -35,10 +39,10 @@
                 <element signature="e#1922#1923#0" expanded="true" />
                 <element signature="e#3282#3283#0" expanded="true" />
                 <element signature="e#3321#3322#0" expanded="true" />
-                <element signature="e#11614#11615#0" expanded="true" />
-                <element signature="e#11649#11650#0" expanded="true" />
-                <element signature="e#17085#17086#0" expanded="true" />
-                <element signature="e#17127#17128#0" expanded="true" />
+                <element signature="e#11538#11539#0" expanded="true" />
+                <element signature="e#11573#11574#0" expanded="true" />
+                <element signature="e#17009#17010#0" expanded="true" />
+                <element signature="e#17051#17052#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -47,8 +51,8 @@
       <file leaf-file-name="Q2.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Q2.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="675">
-              <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
+            <state relative-caret-position="344">
+              <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -68,11 +72,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Q4.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Q4.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Q4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+            <state relative-caret-position="1065">
+              <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -181,10 +185,10 @@
         <option value="$PROJECT_DIR$/src/MyBST.java" />
         <option value="$PROJECT_DIR$/src/Q3.java" />
         <option value="$PROJECT_DIR$/src/Q1.java" />
-        <option value="$PROJECT_DIR$/src/Q1Tree.java" />
         <option value="$PROJECT_DIR$/src/RedBlackBST.java" />
         <option value="$PROJECT_DIR$/src/Q2.java" />
         <option value="$PROJECT_DIR$/src/Q4.java" />
+        <option value="$PROJECT_DIR$/src/Q1Tree.java" />
       </list>
     </option>
   </component>
@@ -259,7 +263,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Q4">
+  <component name="RunManager" selected="Application.Q2">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -404,8 +408,8 @@
     </list>
     <recent_temporary>
       <list size="4">
-        <item index="0" class="java.lang.String" itemvalue="Application.Q4" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Q2" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Q2" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Q4" />
         <item index="2" class="java.lang.String" itemvalue="Application.Q3" />
         <item index="3" class="java.lang.String" itemvalue="Application.Q5" />
       </list>
@@ -431,7 +435,7 @@
       <workItem from="1521767063205" duration="526000" />
       <workItem from="1521986611588" duration="2997000" />
       <workItem from="1522017283792" duration="19806000" />
-      <workItem from="1522090478216" duration="3710000" />
+      <workItem from="1522090478216" duration="8252000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1521507854796</created>
@@ -535,7 +539,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53244000" />
+    <option name="totallyTimeSpent" value="57786000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="877" extended-state="0" />
@@ -548,7 +552,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32992327" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29539642" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.68670076" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27110156" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
@@ -601,17 +605,19 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Q1Tree.java</url>
-          <line>513</line>
+          <line>154</line>
           <properties />
-          <option name="timeStamp" value="18" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="19" />
+      <option name="time" value="21" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
         <watch expression="list.size()" />
         <watch expression="size()" />
+        <watch expression="root" />
+        <watch expression="randInput" />
       </configuration>
     </watches-manager>
   </component>
@@ -1114,14 +1120,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Q1.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MyBST.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1335">
@@ -1136,26 +1134,6 @@
             <element signature="e#1032#1033#0" expanded="true" />
             <element signature="e#1799#1800#0" expanded="true" />
             <element signature="e#1841#1842#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Q1Tree.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2040">
-          <caret line="147" column="16" lean-forward="false" selection-start-line="147" selection-start-column="16" selection-end-line="147" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1685#1686#0" expanded="true" />
-            <element signature="e#1718#1719#0" expanded="true" />
-            <element signature="e#1887#1888#0" expanded="true" />
-            <element signature="e#1922#1923#0" expanded="true" />
-            <element signature="e#3282#3283#0" expanded="true" />
-            <element signature="e#3321#3322#0" expanded="true" />
-            <element signature="e#11614#11615#0" expanded="true" />
-            <element signature="e#11649#11650#0" expanded="true" />
-            <element signature="e#17085#17086#0" expanded="true" />
-            <element signature="e#17127#17128#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1196,16 +1174,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Q2.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="46" column="32" lean-forward="false" selection-start-line="46" selection-start-column="32" selection-end-line="46" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Q5.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -1226,10 +1194,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Q4.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="56" column="30" lean-forward="true" selection-start-line="56" selection-start-column="30" selection-end-line="56" selection-end-column="30" />
+        <state relative-caret-position="1065">
+          <caret line="71" column="5" lean-forward="true" selection-start-line="71" selection-start-column="5" selection-end-line="71" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Q1.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" lean-forward="true" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Q2.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="344">
+          <caret line="28" column="0" lean-forward="false" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Q1Tree.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="142" column="37" lean-forward="false" selection-start-line="142" selection-start-column="37" selection-end-line="142" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1685#1686#0" expanded="true" />
+            <element signature="e#1718#1719#0" expanded="true" />
+            <element signature="e#1887#1888#0" expanded="true" />
+            <element signature="e#1922#1923#0" expanded="true" />
+            <element signature="e#3282#3283#0" expanded="true" />
+            <element signature="e#3321#3322#0" expanded="true" />
+            <element signature="e#11538#11539#0" expanded="true" />
+            <element signature="e#11573#11574#0" expanded="true" />
+            <element signature="e#17009#17010#0" expanded="true" />
+            <element signature="e#17051#17052#0" expanded="true" />
           </folding>
         </state>
       </provider>
