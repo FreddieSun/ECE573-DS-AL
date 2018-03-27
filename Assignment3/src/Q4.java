@@ -1,3 +1,7 @@
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Random;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
@@ -7,10 +11,14 @@ public class Q4 {
     final static int NUM_OF_TRIAL = 1000;
     final static int RANGE_OF_N = 10000;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException{
         int[] nList = new int[RANGE_OF_N];
         for (int i = 0; i < RANGE_OF_N; i++)
             nList[i] = i + 1;
+
+        File csv = new File("Q4.csv");
+        BufferedWriter bw = new BufferedWriter(new FileWriter(csv, true));
+
 
         double[] avg = new double[RANGE_OF_N];
         double[] dev = new double[RANGE_OF_N];
@@ -53,17 +61,18 @@ public class Q4 {
                 devSum += Math.pow(diff, 2);
             }
             dev[k] = Math.sqrt(devSum / NUM_OF_TRIAL);
-
-            System.out.println("Avg internal path length of " + nList[k] + " random keys is: " + avg[k]);
-            System.out.println("std deviation of avg path length of " + nList[k] + " random keys is: " + dev[k] );
-            System.out.println();
+//
+//            System.out.println("Avg internal path length of " + nList[k] + " random keys is: " + avg[k]);
+//            System.out.println("std deviation of avg path length of " + nList[k] + " random keys is: " + dev[k] );
+//            System.out.println();
+            bw.write(String.valueOf(nList[k]) + " , " +String.valueOf(avg[k]) + " , " + String.valueOf(dev[k]));
+            bw.newLine();
         }
-
-
+        bw.close();
     }
 
 
-    // shuffle the array
+    // shuffle t
     public static void shuffleArray(int[] ar)
     {
         // If running on Java 6 or older, use `new Random()` on RHS here

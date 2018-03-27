@@ -44,6 +44,7 @@ public class Q2 {
 
             System.out.println("The avg path length of BST with " + N + "-random insertions is: " + mRandBST.avgPathLength());
             System.out.println("The avg path length of BST with " + N + "-sorted insertions is: " + mSortedBST.avgPathLength());
+            System.out.println();
         }
 
 
