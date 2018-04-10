@@ -6,11 +6,7 @@ public class EdgeWeightedDirectedCycle {
     private boolean[] onStack;            // onStack[v] = is vertex on the stack?
     private Stack<DirectedEdge> cycle;    // directed cycle (or null if no such cycle)
 
-    /**
-     * Determines whether the edge-weighted digraph {@code G} has a directed cycle and,
-     * if so, finds such a cycle.
-     * @param G the edge-weighted digraph
-     */
+
     public EdgeWeightedDirectedCycle(EdgeWeightedDigraph G) {
         marked  = new boolean[G.V()];
         onStack = new boolean[G.V()];
@@ -56,21 +52,12 @@ public class EdgeWeightedDirectedCycle {
         onStack[v] = false;
     }
 
-    /**
-     * Does the edge-weighted digraph have a directed cycle?
-     * @return {@code true} if the edge-weighted digraph has a directed cycle,
-     * {@code false} otherwise
-     */
+
     public boolean hasCycle() {
         return cycle != null;
     }
 
-    /**
-     * Returns a directed cycle if the edge-weighted digraph has a directed cycle,
-     * and {@code null} otherwise.
-     * @return a directed cycle (as an iterable) if the edge-weighted digraph
-     *    has a directed cycle, and {@code null} otherwise
-     */
+
     public Iterable<DirectedEdge> cycle() {
         return cycle;
     }

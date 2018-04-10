@@ -3,9 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="04e37730-3c87-418c-904a-75e1998169a6" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/Q3/src/AcyclicLP.java" afterPath="$PROJECT_DIR$/Q3/src/AcyclicLP.java" />
+      <change beforePath="$PROJECT_DIR$/Q3/src/AcyclicSP.java" afterPath="$PROJECT_DIR$/Q3/src/AcyclicSP.java" />
+      <change beforePath="$PROJECT_DIR$/Q3/src/Bag.java" afterPath="$PROJECT_DIR$/Q3/src/Bag.java" />
       <change beforePath="$PROJECT_DIR$/Q3/src/DepthFirstOrder.java" afterPath="$PROJECT_DIR$/Q3/src/DepthFirstOrder.java" />
-      <change beforePath="$PROJECT_DIR$/Q3/src/Digraph.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/Q3/src/DirectedCycle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/Q3/src/DirectedEdge.java" afterPath="$PROJECT_DIR$/Q3/src/DirectedEdge.java" />
+      <change beforePath="$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java" afterPath="$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java" />
+      <change beforePath="$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java" afterPath="$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java" />
       <change beforePath="$PROJECT_DIR$/Q3/src/Topological.java" afterPath="$PROJECT_DIR$/Q3/src/Topological.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -31,8 +35,18 @@
       <file leaf-file-name="AcyclicLP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q3/src/AcyclicLP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
+            <state relative-caret-position="1020">
+              <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Bag.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Q3/src/Bag.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="58">
+              <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,8 +55,8 @@
       <file leaf-file-name="EdgeWeightedDigraph.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
+            <state relative-caret-position="229">
+              <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -53,27 +67,27 @@
       <file leaf-file-name="AcyclicSP.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q3/src/AcyclicSP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
+            <state relative-caret-position="103">
+              <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
               <folding>
-                <element signature="e#2896#2910#0" expanded="true" />
+                <element signature="e#1462#1476#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DepthFirstOrder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="DepthFirstOrder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q3/src/DepthFirstOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+            <state relative-caret-position="388">
+              <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3184#3185#0" expanded="true" />
-                <element signature="e#3216#3217#0" expanded="true" />
-                <element signature="e#3379#3380#0" expanded="true" />
-                <element signature="e#3410#3411#0" expanded="true" />
-                <element signature="e#3643#3652#0" expanded="true" />
+                <element signature="e#1586#1587#0" expanded="true" />
+                <element signature="e#1618#1619#0" expanded="true" />
+                <element signature="e#1657#1658#0" expanded="true" />
+                <element signature="e#1688#1689#0" expanded="true" />
+                <element signature="e#1779#1788#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,25 +96,28 @@
       <file leaf-file-name="DirectedEdge.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q3/src/DirectedEdge.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="392">
+              <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+              <folding>
+                <element signature="e#605#606#0" expanded="true" />
+                <element signature="e#629#630#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Topological.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Topological.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Q3/src/Topological.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
+            <state relative-caret-position="615">
+              <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
               <folding>
-                <element signature="e#1532#1533#0" expanded="true" />
-                <element signature="e#1560#1561#0" expanded="true" />
-                <element signature="e#1808#1809#0" expanded="true" />
-                <element signature="e#1844#1845#0" expanded="true" />
-                <element signature="e#2157#2158#0" expanded="true" />
-                <element signature="e#2190#2191#0" expanded="true" />
+                <element signature="e#476#477#0" expanded="true" />
+                <element signature="e#504#505#0" expanded="true" />
+                <element signature="e#537#538#0" expanded="true" />
+                <element signature="e#573#574#0" expanded="true" />
+                <element signature="e#619#620#0" expanded="true" />
+                <element signature="e#652#653#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -109,13 +126,13 @@
       <file leaf-file-name="EdgeWeightedDirectedCycle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="-122">
+              <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
               <folding>
-                <element signature="e#2065#2066#0" expanded="true" />
-                <element signature="e#2101#2102#0" expanded="true" />
-                <element signature="e#2417#2418#0" expanded="true" />
-                <element signature="e#2445#2446#0" expanded="true" />
+                <element signature="e#1700#1701#0" expanded="true" />
+                <element signature="e#1736#1737#0" expanded="true" />
+                <element signature="e#1782#1783#0" expanded="true" />
+                <element signature="e#1810#1811#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -170,16 +187,17 @@
         <option value="$PROJECT_DIR$/Q2/src/PrimMST.java" />
         <option value="$PROJECT_DIR$/Q2/src/Q2.java" />
         <option value="$PROJECT_DIR$/Q1/src/EdgeWeightedGraph.java" />
-        <option value="$PROJECT_DIR$/Q3/src/DirectedEdge.java" />
         <option value="$PROJECT_DIR$/Q3/src/DirectedCycle.java" />
         <option value="$PROJECT_DIR$/Q3/src/Digraph.java" />
-        <option value="$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java" />
-        <option value="$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java" />
+        <option value="$PROJECT_DIR$/Q3/src/Q3.java" />
         <option value="$PROJECT_DIR$/Q3/src/AcyclicSP.java" />
         <option value="$PROJECT_DIR$/Q3/src/AcyclicLP.java" />
-        <option value="$PROJECT_DIR$/Q3/src/Q3.java" />
-        <option value="$PROJECT_DIR$/Q3/src/Topological.java" />
+        <option value="$PROJECT_DIR$/Q3/src/Bag.java" />
         <option value="$PROJECT_DIR$/Q3/src/DepthFirstOrder.java" />
+        <option value="$PROJECT_DIR$/Q3/src/DirectedEdge.java" />
+        <option value="$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java" />
+        <option value="$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java" />
+        <option value="$PROJECT_DIR$/Q3/src/Topological.java" />
       </list>
     </option>
   </component>
@@ -432,7 +450,7 @@
       <updated>1522954534760</updated>
       <workItem from="1522954538454" duration="107000" />
       <workItem from="1522954648842" duration="2437000" />
-      <workItem from="1523301002431" duration="13698000" />
+      <workItem from="1523301002431" duration="14259000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1522954685646</created>
@@ -483,11 +501,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523320360319</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Q3 finished">
+      <created>1523320803688</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1523320803688</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16242000" />
+    <option name="totallyTimeSpent" value="16803000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -551,18 +576,6 @@
           <line>114</line>
           <properties />
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Q3/src/Topological.java</url>
-          <line>11</line>
-          <properties />
-          <option name="timeStamp" value="20" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/Q3/src/Topological.java</url>
-          <line>13</line>
-          <properties />
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="22" />
@@ -742,14 +755,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/Bag.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q2/src/IndexMinPQ.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="602">
@@ -809,47 +814,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="58" column="47" lean-forward="true" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/AcyclicSP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="97" column="0" lean-forward="false" selection-start-line="97" selection-start-column="0" selection-end-line="116" selection-end-column="7" />
-          <folding>
-            <element signature="e#2896#2910#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/DirectedEdge.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" lean-forward="false" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-          <folding>
-            <element signature="e#2065#2066#0" expanded="true" />
-            <element signature="e#2101#2102#0" expanded="true" />
-            <element signature="e#2417#2418#0" expanded="true" />
-            <element signature="e#2445#2446#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q3/src/DirectedCycle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -866,29 +830,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/Topological.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="7" lean-forward="true" selection-start-line="20" selection-start-column="7" selection-end-line="20" selection-end-column="7" />
-          <folding>
-            <element signature="e#1532#1533#0" expanded="true" />
-            <element signature="e#1560#1561#0" expanded="true" />
-            <element signature="e#1808#1809#0" expanded="true" />
-            <element signature="e#1844#1845#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
-            <element signature="e#2190#2191#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Q3/src/AcyclicLP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="48" lean-forward="false" selection-start-line="27" selection-start-column="48" selection-end-line="27" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Q3/src/Q3.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="375">
@@ -897,17 +838,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/AcyclicSP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="103">
+          <caret line="47" column="0" lean-forward="false" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#1462#1476#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/AcyclicLP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1020">
+          <caret line="68" column="0" lean-forward="false" selection-start-line="68" selection-start-column="0" selection-end-line="68" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/Bag.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="58">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Q3/src/DepthFirstOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
+        <state relative-caret-position="388">
+          <caret line="101" column="0" lean-forward="false" selection-start-line="101" selection-start-column="0" selection-end-line="101" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3184#3185#0" expanded="true" />
-            <element signature="e#3216#3217#0" expanded="true" />
-            <element signature="e#3379#3380#0" expanded="true" />
-            <element signature="e#3410#3411#0" expanded="true" />
-            <element signature="e#3643#3652#0" expanded="true" />
+            <element signature="e#1586#1587#0" expanded="true" />
+            <element signature="e#1618#1619#0" expanded="true" />
+            <element signature="e#1657#1658#0" expanded="true" />
+            <element signature="e#1688#1689#0" expanded="true" />
+            <element signature="e#1779#1788#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/DirectedEdge.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="392">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="e#605#606#0" expanded="true" />
+            <element signature="e#629#630#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/EdgeWeightedDigraph.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="125" column="0" lean-forward="false" selection-start-line="125" selection-start-column="0" selection-end-line="125" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/EdgeWeightedDirectedCycle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-122">
+          <caret line="59" column="0" lean-forward="false" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding>
+            <element signature="e#1700#1701#0" expanded="true" />
+            <element signature="e#1736#1737#0" expanded="true" />
+            <element signature="e#1782#1783#0" expanded="true" />
+            <element signature="e#1810#1811#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Q3/src/Topological.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="41" column="1" lean-forward="false" selection-start-line="41" selection-start-column="1" selection-end-line="41" selection-end-column="1" />
+          <folding>
+            <element signature="e#476#477#0" expanded="true" />
+            <element signature="e#504#505#0" expanded="true" />
+            <element signature="e#537#538#0" expanded="true" />
+            <element signature="e#573#574#0" expanded="true" />
+            <element signature="e#619#620#0" expanded="true" />
+            <element signature="e#652#653#0" expanded="true" />
           </folding>
         </state>
       </provider>
