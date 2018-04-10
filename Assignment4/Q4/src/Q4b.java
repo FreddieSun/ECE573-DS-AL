@@ -1,13 +1,13 @@
 import java.io.FileNotFoundException;
 import java.text.DecimalFormat;
 
-public class Q4a {
+public class Q4b {
     private static final DecimalFormat DF = new DecimalFormat("0.00");
 
     public static void main(String[] args) throws FileNotFoundException {
 
 
-        EdgeWeightedDigraph ewg = new EdgeWeightedDigraph("Q4a.txt");
+        EdgeWeightedDigraph ewg = new EdgeWeightedDigraph("Q4b.txt");
         int s = 0;
         BellmanFordSP bmsp = new BellmanFordSP(ewg, s);
 
