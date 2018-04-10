@@ -7,18 +7,18 @@ public class Topological {
      * Determines whether the digraph {@code G} has a topological order and, if so,
      * finds such a topological order.
      * @param G the digraph
-     */
-    public Topological(Digraph G) {
-        DirectedCycle finder = new DirectedCycle(G);
-        if (!finder.hasCycle()) {
-            DepthFirstOrder dfs = new DepthFirstOrder(G);
-            order = dfs.reversePost();
-            rank = new int[G.V()];
-            int i = 0;
-            for (int v : order)
-                rank[v] = i++;
-        }
-    }
+//     */
+//    public Topological(Digraph G) {
+//        DirectedCycle finder = new DirectedCycle(G);
+//        if (!finder.hasCycle()) {
+//            DepthFirstOrder dfs = new DepthFirstOrder(G);
+//            order = dfs.reversePost();
+//            rank = new int[G.V()];
+//            int i = 0;
+//            for (int v : order)
+//                rank[v] = i++;
+//        }
+//    }
 
     /**
      * Determines whether the edge-weighted digraph {@code G} has a topological

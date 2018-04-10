@@ -12,21 +12,21 @@ public class DepthFirstOrder {
     private int preCounter;            // counter or preorder numbering
     private int postCounter;           // counter for postorder numbering
 
-    /**
-     * Determines a depth-first order for the digraph {@code G}.
-     * @param G the digraph
-     */
-    public DepthFirstOrder(Digraph G) {
-        pre    = new int[G.V()];
-        post   = new int[G.V()];
-        postorder = new Queue<Integer>();
-        preorder  = new Queue<Integer>();
-        marked    = new boolean[G.V()];
-        for (int v = 0; v < G.V(); v++)
-            if (!marked[v]) dfs(G, v);
-
-        assert check();
-    }
+//    /**
+//     * Determines a depth-first order for the digraph {@code G}.
+//     * @param G the digraph
+//     */
+//    public DepthFirstOrder(Digraph G) {
+//        pre    = new int[G.V()];
+//        post   = new int[G.V()];
+//        postorder = new Queue<Integer>();
+//        preorder  = new Queue<Integer>();
+//        marked    = new boolean[G.V()];
+//        for (int v = 0; v < G.V(); v++)
+//            if (!marked[v]) dfs(G, v);
+//
+//        assert check();
+//    }
 
     /**
      * Determines a depth-first order for the edge-weighted digraph {@code G}.
@@ -41,20 +41,20 @@ public class DepthFirstOrder {
         for (int v = 0; v < G.V(); v++)
             if (!marked[v]) dfs(G, v);
     }
-
-    // run DFS in digraph G from vertex v and compute preorder/postorder
-    private void dfs(Digraph G, int v) {
-        marked[v] = true;
-        pre[v] = preCounter++;
-        preorder.enqueue(v);
-        for (int w : G.adj(v)) {
-            if (!marked[w]) {
-                dfs(G, w);
-            }
-        }
-        postorder.enqueue(v);
-        post[v] = postCounter++;
-    }
+//
+//    // run DFS in digraph G from vertex v and compute preorder/postorder
+//    private void dfs(Digraph G, int v) {
+//        marked[v] = true;
+//        pre[v] = preCounter++;
+//        preorder.enqueue(v);
+//        for (int w : G.adj(v)) {
+//            if (!marked[w]) {
+//                dfs(G, w);
+//            }
+//        }
+//        postorder.enqueue(v);
+//        post[v] = postCounter++;
+//    }
 
     // run DFS in edge-weighted digraph G from vertex v and compute preorder/postorder
     private void dfs(EdgeWeightedDigraph G, int v) {
