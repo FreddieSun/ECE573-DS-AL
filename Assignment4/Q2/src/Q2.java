@@ -17,5 +17,6 @@ public class Q2 {
 
         System.out.println(end1 - start1);
         System.out.println(end2 - start2);
+
     }
 }
