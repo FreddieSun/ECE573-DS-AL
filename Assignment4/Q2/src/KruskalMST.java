@@ -1,6 +1,4 @@
 
-import edu.princeton.cs.algs4.MinPQ;
-import edu.princeton.cs.algs4.Queue;
 
 public class KruskalMST {
     private static final double FLOATING_POINT_EPSILON = 1E-12;
