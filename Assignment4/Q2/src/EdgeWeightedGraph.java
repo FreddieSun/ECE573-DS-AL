@@ -1,7 +1,6 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class EdgeWeightedGraph {
     private static final String NEWLINE = System.getProperty("line.separator");

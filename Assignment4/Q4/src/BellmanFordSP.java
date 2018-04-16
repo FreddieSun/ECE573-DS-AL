@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 public class BellmanFordSP {
     private double[] distTo;               // distTo[v] = distance  of shortest s->v path

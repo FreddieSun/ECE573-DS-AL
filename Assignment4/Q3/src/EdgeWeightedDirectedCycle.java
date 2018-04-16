@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 public class EdgeWeightedDirectedCycle {
     private boolean[] marked;             // marked[v] = has vertex v been marked?

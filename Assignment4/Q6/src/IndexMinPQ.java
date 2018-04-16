@@ -140,6 +140,15 @@ public class IndexMinPQ<Key extends Comparable<Key>> implements Iterable<Integer
         }
     }
 
+    public void decreaseKey(int i, Key key) {
+        if (i < 0 || i >= maxN) throw new IllegalArgumentException();
+        if (!contains(i)) throw new NoSuchElementException("index is not in the priority queue");
+        if (keys[i].compareTo(key) <= 0)
+            throw new IllegalArgumentException("Calling decreaseKey() with given argument would not strictly decrease the key");
+        keys[i] = key;
+        swim(qp[i]);
+    }
+
 
     public Iterator<Integer> iterator() { return new HeapIterator(); }
 

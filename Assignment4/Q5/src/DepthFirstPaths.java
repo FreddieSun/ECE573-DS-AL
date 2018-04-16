@@ -1,4 +1,3 @@
-//import java.util.Stack;
 //
 //public class DepthFirstPaths {
 //    private boolean[] marked;    // marked[v] = is there an s-v path?

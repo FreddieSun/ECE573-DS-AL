@@ -1,6 +1,5 @@
 
 
-import java.util.Stack;
 
 public class DepthFirstOrder {
     private boolean[] marked;          // marked[v] = has v been marked in dfs?

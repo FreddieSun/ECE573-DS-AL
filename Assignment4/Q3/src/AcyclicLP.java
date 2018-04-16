@@ -1,4 +1,3 @@
-import java.util.Stack;
 
 public class AcyclicLP {
     private double[] distTo;          // distTo[v] = distance  of longest s->v path

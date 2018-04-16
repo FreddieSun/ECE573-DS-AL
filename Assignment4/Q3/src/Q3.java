@@ -5,7 +5,7 @@ public class Q3 {
     public static void main(String[] args) throws FileNotFoundException {
 
         EdgeWeightedDigraph ewd = new EdgeWeightedDigraph("Q3.txt");
-        int s = 0;
+        int s = 5;
         AcyclicSP sp = new AcyclicSP(ewd, s);
         AcyclicLP lp = new AcyclicLP(ewd, s);
 
@@ -18,6 +18,7 @@ public class Q3 {
                 for (DirectedEdge e : sp.pathTo(v)) {
                     System.out.println(e + "   ");
                 }
+                System.out.println();
             } else {
                 System.out.println(s + " to " + v + " no path");
 
