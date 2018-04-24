@@ -2,7 +2,7 @@ import java.io.FileNotFoundException;
 
 public class Q6 {
     public static void main(String[] args) throws FileNotFoundException {
-        EdgeWeightedDigraph G = new EdgeWeightedDigraph("Q4a.txt");//Q4(b).txt
+        EdgeWeightedDigraph G = new EdgeWeightedDigraph("Q4b.txt");//Q4(b).txt
         int s = 0;
         DijkstraSP sp = new DijkstraSP(G, s);
         for (int t = 0; t < G.V(); t++) {
