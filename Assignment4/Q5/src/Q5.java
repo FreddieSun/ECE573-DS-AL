@@ -6,7 +6,7 @@ public class Q5 {
         int s = 1;
 
         //BreadthFirstSearch bfs = new BreadthFirstSearch(nyc, s);
-        DepthFirstPaths dfs = new DepthFirstPaths(nyc, s);
+        DepthFirstSearch dfs = new DepthFirstSearch(nyc, s);
 
     }
 }

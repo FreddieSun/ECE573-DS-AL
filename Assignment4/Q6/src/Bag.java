@@ -1,4 +1,5 @@
 
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
@@ -24,7 +25,6 @@ public class Bag<Item> implements Iterable<Item> {
         return first == null;
     }
 
-
     public int size() {
         return n;
     }
@@ -36,7 +36,6 @@ public class Bag<Item> implements Iterable<Item> {
         first.next = oldfirst;
         n++;
     }
-
 
 
     public Iterator<Item> iterator()  {
@@ -65,4 +64,3 @@ public class Bag<Item> implements Iterable<Item> {
 
 
 }
-

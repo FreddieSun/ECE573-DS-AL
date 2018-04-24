@@ -2,7 +2,6 @@ import java.io.FileNotFoundException;
 
 public class Q2 {
     public static void main(String[] args) throws FileNotFoundException {
-        // 读入
         EdgeWeightedGraph ewg = new EdgeWeightedGraph("Q1.txt");
 
         long start1 = System.currentTimeMillis();

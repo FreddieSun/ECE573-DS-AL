@@ -1,9 +1,9 @@
-public class DepthFirstPaths {
+public class DepthFirstSearch {
 
     private boolean[] marked;
     int count = 0;
 
-    public DepthFirstPaths(EdgeWeightedGraph G, int s) {
+    public DepthFirstSearch(EdgeWeightedGraph G, int s) {
         marked = new boolean[G.V()];
 
         Stack<Integer> stack = new Stack<Integer>();
